@@ -33,4 +33,11 @@ export default defineNuxtConfig({
     locales: ["ru"],
     defaultLocale: "ru",
   },
+  vite: {
+    build: {
+      rollupOptions: {
+        external: ["/assets/logo.gif"],
+      },
+    },
+  },
 });
