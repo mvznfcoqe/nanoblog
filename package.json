@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.3.0",
+    "@nuxtjs/device": "3.2.4",
+    "@nuxtjs/i18n": "9.3.1",
+    "@unocss/reset": "66.1.0-beta.6",
+    "nuxt": "^3.16.0",
+    "nuxt-typed-router": "3.7.3",
+    "prettier": "^2.5.x || 3.x",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "better-sqlite3",
+      "esbuild"
+    ]
+  },
+  "packageManager": "pnpm@10.6.3+sha1.43e3aa4a371d889dfb0ffe7a9b5d4ca0668ccaa9",
+  "devDependencies": {
+    "@unocss/nuxt": "66.1.0-beta.6",
+    "unocss": "66.1.0-beta.6"
+  }
+}
