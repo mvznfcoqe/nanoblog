@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "@nuxtjs/i18n",
     "nuxt-cloudflare-analytics",
+    "@vueuse/nuxt",
   ],
   app: {
     head: {

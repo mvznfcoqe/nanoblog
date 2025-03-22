@@ -7,13 +7,13 @@
 <script setup lang="ts">
 import { ContentRenderer } from "~/shared/ui/content-renderer";
 
-const route = useRoute("tag-article");
+const route = useRoute("article");
 const { locale } = useI18n();
 
 const { data: article } = await useAsyncData(route.path, async () => {
-  const { article, tag } = route.params;
+  const { article } = route.params;
 
-  const path = `/articles/${tag}/${article}/${locale.value}`;
+  const path = `/articles/${article}/${locale.value}`;
 
   return queryCollection("content").path(path).first();
 });
