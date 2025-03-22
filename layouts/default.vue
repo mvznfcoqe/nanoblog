@@ -19,38 +19,14 @@ import "@unocss/reset/tailwind.css";
 
 const { isFirefox, isDesktop } = useDevice();
 
-const faviconsAmount = 32;
-
-const favicons = Array.from(Array(faviconsAmount), (_, i) => {
-  return `/favicon/favicon-${i + 1}.ico`;
-});
-
-const faviconIndex = ref(0);
-const favicon = ref(favicons[faviconIndex.value]);
-
-const changeAnimatedFavicon = () => {
-  console.log(faviconIndex.value);
-  if (faviconIndex.value === faviconsAmount - 1) {
-    faviconIndex.value = 0;
-  } else {
-    faviconIndex.value += 1;
-  }
-
-  favicon.value = favicons[faviconIndex.value];
-};
+const favicon = ref();
 
 onMounted(() => {
-  if (!isDesktop) {
-    return;
-  }
-
-  if (isFirefox) {
+  if (isFirefox && isDesktop) {
     favicon.value = `/favicon/favicon.gif`;
 
     return;
   }
-
-  setInterval(changeAnimatedFavicon, 1000);
 });
 
 useHead({ link: [{ rel: "icon", href: favicon }] });

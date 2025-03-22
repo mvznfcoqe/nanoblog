@@ -36,5 +36,6 @@ export default defineNuxtConfig({
   },
   cloudflareAnalytics: {
     token: "4f9fe97ac3af40b5a4a6c37ede082fae",
+    scriptPath: "/scripts/cf.js",
   },
 });
