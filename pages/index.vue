@@ -35,7 +35,7 @@
 import type { ContentCollectionItem } from "@nuxt/content";
 import { ContentRenderer } from "~/shared/ui/content-renderer";
 
-const { play } = useSound("/assets/sounds/sylvana.mp3");
+const { play } = useSound("/assets/sounds/sylvana.mp3", { volume: 0.6 });
 
 const route = useRoute("article");
 const { locale } = useI18n();
