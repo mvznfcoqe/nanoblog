@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     defaultLocale: "ru",
   },
   cloudflareAnalytics: {
-    token: "4f9fe97ac3af40b5a4a6c37ede082fae",
+    token: "6a325b5be6754676a4daefe7c6257681",
     scriptPath: "/scripts/cf.js",
   },
 });
