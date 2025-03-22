@@ -3,7 +3,7 @@
 
   <div class="flex flex-col gap-3">
     <div
-      class="flex flex-col"
+      class="flex flex-col prose"
       v-for="article in articlesForCurrentLocale"
       :key="article.id"
     >
@@ -11,8 +11,12 @@
         {{ article.title }}
       </a>
 
-      <div class="text-xs opacity-50">
-        {{ getArticleLocalizedDate(article) }}
+      <div class="flex gap-2 text-xs opacity-50">
+        <div class="capitalize">{{ getArticlePageTag(article) }}</div>
+
+        <div>
+          {{ getArticleLocalizedDate(article) }}
+        </div>
       </div>
     </div>
   </div>
@@ -20,12 +24,13 @@
 
 <script setup lang="ts">
 import type { ContentCollectionItem } from "@nuxt/content";
+import { ContentRenderer } from "~/shared/ui/content-renderer";
 
 const route = useRoute("tag-article");
 const { locale } = useI18n();
 
 const { data: homePageContent } = await useAsyncData(route.path, async () => {
-  const path = `/main/${locale.value}`;
+  const path = `/${locale.value}`;
 
   return queryCollection("content").path(path).first();
 });
@@ -40,12 +45,19 @@ const articlesForCurrentLocale = computed(() => {
   }
 
   return articles.value.filter((article: ContentCollectionItem) => {
-    return article.path.endsWith(`/${locale.value}`);
+    return (
+      article.path.endsWith(`/${locale.value}`) &&
+      article.path.startsWith(`/articles`)
+    );
   });
 });
 
 const getArticlePagePath = (article: ContentCollectionItem) => {
-  return article.path.split("/").slice(0, -1).join("/");
+  return article.path.split("/").filter(Boolean).slice(1, -1).join("/");
+};
+
+const getArticlePageTag = (article: ContentCollectionItem) => {
+  return article.path.split("/").filter(Boolean)[1];
 };
 
 const getArticleLocalizedDate = (article: ContentCollectionItem) => {

@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "nuxt-typed-router",
     "@nuxtjs/i18n",
+    "nuxt-cloudflare-analytics",
   ],
   app: {
     head: {
@@ -32,5 +33,8 @@ export default defineNuxtConfig({
   i18n: {
     locales: ["ru"],
     defaultLocale: "ru",
+  },
+  cloudflareAnalytics: {
+    token: "4f9fe97ac3af40b5a4a6c37ede082fae",
   },
 });
