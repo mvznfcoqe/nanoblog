@@ -69,7 +69,7 @@ Apollo при подключении девайса создает виртуа�
 
 ## Как установить?
 
-Установка подробно описана в [документации Sunshine](https://docs.lizardbyte.dev/projects/sunshine/en/latest/about/setup.html)
+Установка подробно описана в [документации Sunshine](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2getting__started.html)
 
 ## Ссылки
 
