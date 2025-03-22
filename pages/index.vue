@@ -30,7 +30,7 @@ const { data: homePageContent } = await useAsyncData(route.path, async () => {
   return queryCollection("content").path(path).first();
 });
 
-const { data: articles } = await useAsyncData(route.path, async () => {
+const { data: articles } = await useAsyncData("articles", async () => {
   return queryCollection("content").all();
 });
 
