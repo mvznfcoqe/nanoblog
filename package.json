@@ -10,19 +10,21 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.3.0",
+    "@nuxt/content": "^3.5.1",
+    "@nuxt/image": "1.10.0",
     "@nuxtjs/device": "3.2.4",
-    "@nuxtjs/i18n": "9.3.1",
+    "@nuxtjs/i18n": "9.5.5",
     "@unocss/reset": "66.1.0-beta.6",
-    "@vueuse/core": "^13.0.0",
+    "@vueuse/core": "^13.3.0",
     "@vueuse/nuxt": "13.0.0",
     "@vueuse/sound": "^2.1.3",
-    "nuxt": "^3.16.0",
+    "date-fns": "^4.1.0",
+    "nuxt": "^3.17.5",
     "nuxt-cloudflare-analytics": "^1.0.8",
     "nuxt-typed-router": "3.7.3",
-    "prettier": "^2.5.x || 3.x",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "prettier": "^3.5.3",
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -31,7 +33,7 @@
       "esbuild"
     ]
   },
-  "packageManager": "pnpm@10.6.3+sha1.43e3aa4a371d889dfb0ffe7a9b5d4ca0668ccaa9",
+  "packageManager": "pnpm@10.11.1",
   "devDependencies": {
     "@unocss/nuxt": "66.1.0-beta.6",
     "unocss": "66.1.0-beta.6"

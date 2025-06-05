@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-cloudflare-analytics",
     "@vueuse/nuxt",
+    "@nuxt/image",
   ],
   app: {
     head: {
@@ -32,8 +33,9 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   i18n: {
-    locales: ["ru"],
-    defaultLocale: "ru",
+    locales: ["ru", "en"],
+    defaultLocale: "en",
+    strategy: "prefix",
   },
   cloudflareAnalytics: {
     token: "6a325b5be6754676a4daefe7c6257681",

@@ -15,6 +15,6 @@ const { data: article } = await useAsyncData(route.path, async () => {
 
   const path = `/articles/${article}/${locale.value}`;
 
-  return queryCollection("content").path(path).first();
+  return queryCollection("articles").path(path).first();
 });
 </script>

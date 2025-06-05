@@ -1,11 +1,36 @@
 <template>
   <div class="font-sans mx-5">
     <header class="flex justify-between py-5 font-mono">
-      <a class="flex gap-2 items-center" href="/">
-        <img src="/assets/logo.gif" alt="Angry logo" class="size-6" />
+      <div class="flex items-center gap-8">
+        <a class="flex gap-2 items-center" href="/">
+          <img src="/assets/logo.gif" alt="Angry logo" class="size-6" />
+          frkam / nanoblog
+        </a>
+        <nav class="flex gap-6">
+          <NuxtLink
+            :to="localePath('/')"
+            class="text-gray-800 hover:text-gray-600 transition-colors"
+          >
+            Home
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/books')"
+            class="text-gray-800 hover:text-gray-600 transition-colors"
+          >
+            Books
+          </NuxtLink>
+        </nav>
+      </div>
 
-        frkam / nanoblog
-      </a>
+      <div>
+        <NuxtLink :to="switchLocalePath('en')" v-if="locale === 'ru'">
+          en
+        </NuxtLink>
+
+        <NuxtLink :to="switchLocalePath('ru')" v-if="locale === 'en'">
+          ru
+        </NuxtLink>
+      </div>
     </header>
 
     <div class="max-w-prose mx-auto mt-5">
@@ -16,6 +41,10 @@
 
 <script setup lang="ts">
 import "@unocss/reset/tailwind.css";
+
+const switchLocalePath = useSwitchLocalePath();
+const localePath = useLocalePath();
+const { locale } = useI18n();
 
 const { isFirefox, isDesktop } = useDevice();
 
