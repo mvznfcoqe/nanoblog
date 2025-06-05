@@ -1,12 +1,12 @@
 <template>
   <div class="font-sans mx-5">
-    <header class="flex justify-between py-5 font-mono">
-      <div class="flex items-center gap-8">
+    <header class="flex justify-between gap-2 py-5 font-mono">
+      <div class="flex items-center gap-4">
         <a class="flex gap-2 items-center" href="/">
           <img src="/assets/logo.gif" alt="Angry logo" class="size-6" />
           frkam / nanoblog
         </a>
-        <nav class="flex gap-6">
+        <nav class="flex gap-2">
           <NuxtLink
             :to="localePath('/')"
             class="text-gray-800 hover:text-gray-600 transition-colors"
@@ -22,7 +22,7 @@
         </nav>
       </div>
 
-      <div>
+      <div class="flex items-center">
         <NuxtLink :to="switchLocalePath('en')" v-if="locale === 'ru'">
           en
         </NuxtLink>
