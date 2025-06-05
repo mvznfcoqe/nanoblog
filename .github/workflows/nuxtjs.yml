@@ -13,9 +13,11 @@ jobs:
       - run: corepack enable
       - name: Install pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: "10.11.1"
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "23.10.0"
       # Pick your own package manager and build script
       - run: pnpm install
       - run: pnpm run generate
