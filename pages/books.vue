@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-8">
     <div
       class="flex gap-2 prose"
       v-for="{
@@ -13,7 +13,7 @@
       } in booksForCurrentLocale"
       :key="id"
     >
-      <a :href="url" class="w-18 shrink-0">
+      <a :href="url" class="w-18 shrink-0 flex items-center">
         <NuxtImg :src="cover" />
       </a>
 
@@ -43,13 +43,15 @@ const { data: books } = await useAsyncData<BooksCollectionItem[]>(
 );
 
 const booksForCurrentLocale = computed(() => {
+  console.log(books.value);
+
   if (!books.value) {
     return [];
   }
 
   return books.value.filter((book: BooksCollectionItem) => {
     return (
-      book.path.startsWith(`/books`) && book.path.endsWith(`/${locale.value}`)
+      book.path.startsWith(`/books`) && book.path.includes(`/${locale.value}`)
     );
   });
 });
