@@ -17,11 +17,7 @@
         </div>
 
         <div class="capitalize">
-          <span
-            v-for="(tag, index) in tags"
-            :key="tag"
-            @click="handleTagClicked(tag)"
-          >
+          <span v-for="(tag, index) in tags" :key="tag">
             <template v-if="index">,</template>
             {{ tag }}
           </span>
@@ -36,8 +32,6 @@ import type { ArticlesCollectionItem } from "@nuxt/content";
 import { parse } from "date-fns";
 import { dateFormat } from "~/shared/consts/formats";
 import { ContentRenderer } from "~/shared/ui/content-renderer";
-
-const { play } = useSound("/assets/sounds/sylvana.mp3", { volume: 0.6 });
 
 const route = useRoute("article");
 const { locale } = useI18n();
@@ -67,19 +61,5 @@ const articlesForCurrentLocale = computed(() => {
 
 const getArticlePagePath = (path: ArticlesCollectionItem["path"]) => {
   return path.split("/").filter(Boolean).slice(1, -1).join("/");
-};
-
-const gamesTagClickedCount = ref(0);
-
-const handleTagClicked = (tag: string) => {
-  if (tag === "games") {
-    gamesTagClickedCount.value += 1;
-
-    if (gamesTagClickedCount.value === 3) {
-      play();
-
-      gamesTagClickedCount.value = 0;
-    }
-  }
 };
 </script>
