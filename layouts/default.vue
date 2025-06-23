@@ -1,10 +1,10 @@
 <template>
   <div class="font-sans mx-5">
-    <header class="flex justify-between gap-2 py-5 font-mono">
-      <div class="flex items-center gap-4">
+    <header class="flex justify-between gap-6 py-5 font-mono">
+      <div class="flex items-center gap-6">
         <a class="flex gap-2 items-center" href="/">
           <img src="/assets/logo.gif" alt="Angry logo" class="size-6" />
-          frkam / nanoblog
+          <span class="hidden sm:inline">frkam / </span>nanoblog
         </a>
         <nav class="flex gap-2">
           <NuxtLink
