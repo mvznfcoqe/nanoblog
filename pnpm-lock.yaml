@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@nuxt/content':
-        specifier: ^3.6.3
+        specifier: ^3.5.1
         version: 3.6.3(better-sqlite3@11.10.0)(magicast@0.3.5)(vue-component-type-helpers@2.2.10)
       '@nuxt/image':
         specifier: 1.10.0
@@ -24,7 +24,7 @@ importers:
         specifier: 66.1.0-beta.6
         version: 66.1.0-beta.6
       '@vueuse/core':
-        specifier: ^13.6.0
+        specifier: ^13.3.0
         version: 13.6.0(vue@3.5.18(typescript@5.9.2))
       '@vueuse/nuxt':
         specifier: 13.0.0
@@ -36,7 +36,7 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       nuxt:
-        specifier: ^3.18.1
+        specifier: ^3.17.5
         version: 3.18.1(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.2.1)(@vue/compiler-sfc@3.5.18)(better-sqlite3@11.10.0)(db0@0.3.2(better-sqlite3@11.10.0))(eslint@9.22.0(jiti@2.5.1))(ioredis@5.7.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.46.2)(sass@1.86.0)(terser@5.43.1)(typescript@5.9.2)(vite@7.1.1(@types/node@24.2.1)(jiti@2.5.1)(sass@1.86.0)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1)
       nuxt-cloudflare-analytics:
         specifier: ^1.0.8
@@ -45,10 +45,10 @@ importers:
         specifier: 3.7.3
         version: 3.7.3(magicast@0.3.5)(prettier@3.6.2)
       prettier:
-        specifier: ^3.6.2
+        specifier: ^3.5.3
         version: 3.6.2
       vue:
-        specifier: ^3.5.18
+        specifier: ^3.5.16
         version: 3.5.18(typescript@5.9.2)
       vue-router:
         specifier: ^4.5.1
