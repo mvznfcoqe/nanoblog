@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/favicon/favicon-1.ico" },
+        { rel: "icon", type: "image/x-icon", href: "/favicon/favicon.gif" },
       ],
       title: "frkam / nanoblog",
     },

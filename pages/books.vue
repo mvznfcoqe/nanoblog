@@ -43,8 +43,6 @@ const { data: books } = await useAsyncData<BooksCollectionItem[]>(
 );
 
 const booksForCurrentLocale = computed(() => {
-  console.log(books.value);
-
   if (!books.value) {
     return [];
   }

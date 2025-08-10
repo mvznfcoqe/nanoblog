@@ -1,36 +1,20 @@
 <template>
   <ContentRenderer v-if="homePageContent" :value="homePageContent" />
 
-  <div class="flex flex-col gap-3">
-    <div
-      class="flex flex-col prose"
-      v-for="{ id, title, tags, date, path } in articlesForCurrentLocale"
-      :key="id"
-    >
-      <a :href="getArticlePagePath(path)">
-        {{ title }}
-      </a>
+  <hr v-if="articlesForCurrentLocale.length" />
 
-      <div class="flex gap-1 text-xs opacity-50">
-        <div>
-          {{ parse(date, dateFormat, new Date()).toLocaleDateString(locale) }},
-        </div>
-
-        <div class="capitalize">
-          <span v-for="(tag, index) in tags" :key="tag">
-            <template v-if="index">,</template>
-            {{ tag }}
-          </span>
-        </div>
-      </div>
-    </div>
+  <div class="flex flex-col gap-3 mt-4">
+    <Article
+      v-for="article in articlesForCurrentLocale"
+      :key="article.id"
+      v-bind="article"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import type { ArticlesCollectionItem } from "@nuxt/content";
-import { parse } from "date-fns";
-import { dateFormat } from "~/shared/consts/formats";
+import { Article } from "@/pages/main";
 import { ContentRenderer } from "~/shared/ui/content-renderer";
 
 const route = useRoute("article");
@@ -39,7 +23,7 @@ const { locale } = useI18n();
 const { data: homePageContent } = await useAsyncData(route.path, async () => {
   const path = `/${locale.value}`;
 
-  return queryCollection("articles").path(path).first();
+  return queryCollection("index").path(path).first();
 });
 
 const { data: articles } = await useAsyncData("articles", async () => {
@@ -58,8 +42,4 @@ const articlesForCurrentLocale = computed(() => {
     );
   });
 });
-
-const getArticlePagePath = (path: ArticlesCollectionItem["path"]) => {
-  return path.split("/").filter(Boolean).slice(1, -1).join("/");
-};
 </script>

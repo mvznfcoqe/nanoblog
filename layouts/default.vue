@@ -8,12 +8,6 @@
         </a>
         <nav class="flex gap-2">
           <NuxtLink
-            :to="localePath('/')"
-            class="text-gray-800 hover:text-gray-600 transition-colors"
-          >
-            Home
-          </NuxtLink>
-          <NuxtLink
             :to="localePath('/books')"
             class="text-gray-800 hover:text-gray-600 transition-colors"
           >
@@ -45,18 +39,4 @@ import "@unocss/reset/tailwind.css";
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
 const { locale } = useI18n();
-
-const { isFirefox, isDesktop } = useDevice();
-
-const favicon = ref();
-
-onMounted(() => {
-  if (isFirefox && isDesktop) {
-    favicon.value = `/favicon/favicon.gif`;
-
-    return;
-  }
-});
-
-useHead({ link: [{ rel: "icon", href: favicon }] });
 </script>
