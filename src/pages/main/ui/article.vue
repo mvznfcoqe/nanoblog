@@ -18,7 +18,7 @@ const articlePath = computed(() => {
     return;
   }
 
-  return props.path.split("/").filter(Boolean).slice(1, -1).join("/");
+  return `/${locale.value}/${props.path.split("/").filter(Boolean).slice(1, -1).join("/")}`;
 });
 </script>
 
