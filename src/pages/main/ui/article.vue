@@ -12,21 +12,30 @@ type Props = {
 const props = defineProps<Props>();
 
 const { locale } = useI18n();
+const localePath = useLocalePath();
 
 const articlePath = computed(() => {
   if (!props.path) {
     return;
   }
 
-  return `/${locale.value}/${props.path.split("/").filter(Boolean).slice(1, -1).join("/")}`;
+  return localePath(
+    {
+      name: "article",
+      params: {
+        article: props.path.split("/").filter(Boolean).slice(1, -1).join("/"),
+      },
+    },
+    locale.value
+  );
 });
 </script>
 
 <template>
   <div class="flex flex-col prose">
-    <a v-if="articlePath" :href="articlePath">
+    <NuxtLink v-if="articlePath" :to="articlePath">
       {{ title }}
-    </a>
+    </NuxtLink>
 
     <div v-else>
       {{ title }}

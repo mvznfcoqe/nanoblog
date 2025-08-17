@@ -2,10 +2,10 @@
   <div class="font-sans mx-5">
     <header class="flex justify-between gap-6 py-5 font-mono">
       <div class="flex items-center gap-6">
-        <a class="flex gap-2 items-center" href="/">
+        <NuxtLink class="flex gap-2 items-center" :to="localePath('/')">
           <img src="/favicon/favicon.gif" alt="Angry logo" class="size-6" />
           <span class="hidden sm:inline">frkam / </span>nanoblog
-        </a>
+        </NuxtLink>
         <nav class="flex gap-2">
           <NuxtLink
             :to="localePath('/books')"
