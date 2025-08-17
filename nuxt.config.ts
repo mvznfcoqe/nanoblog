@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "nuxt-typed-router",
     "@nuxtjs/i18n",
-    "nuxt-cloudflare-analytics",
     "@vueuse/nuxt",
     "@nuxt/image",
   ],
