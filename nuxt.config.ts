@@ -37,8 +37,4 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     strategy: "prefix",
   },
-  cloudflareAnalytics: {
-    token: "6a325b5be6754676a4daefe7c6257681",
-    scriptPath: "/scripts/cf.js",
-  },
 });

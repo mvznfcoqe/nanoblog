@@ -59,9 +59,9 @@ Apollo при подключении девайса создает виртуа�
 
 Никаких дополнительных конфигураций Apollo не требовал, все работает из коробки.
 
-![Moonlight on Meta Quest](/assets/best-way-to-setup-local-gamestream/quest-moonlight.jpg)
+![Moonlight on Meta Quest](/media/articles/best-way-to-setup-local-gamestream/quest-moonlight.jpg)
 
-![Moonlight on Macbook](/assets/best-way-to-setup-local-gamestream/macbook-moonlight.jpg)
+![Moonlight on Macbook](/media/articles/best-way-to-setup-local-gamestream/macbook-moonlight.jpg)
 
 ## Что еще можно?
 
