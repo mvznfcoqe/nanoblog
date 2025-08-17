@@ -3,7 +3,7 @@
     <header class="flex justify-between gap-6 py-5 font-mono">
       <div class="flex items-center gap-6">
         <a class="flex gap-2 items-center" href="/">
-          <img :src="Logo" alt="Angry logo" class="size-6" />
+          <img src="/favicon/favicon.gif" alt="Angry logo" class="size-6" />
           <span class="hidden sm:inline">frkam / </span>nanoblog
         </a>
         <nav class="flex gap-2">
@@ -35,7 +35,6 @@
 
 <script setup lang="ts">
 import "@unocss/reset/tailwind.css";
-import Logo from "@/shared/assets/logo.gif";
 
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
