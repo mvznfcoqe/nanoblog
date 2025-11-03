@@ -8,6 +8,13 @@
         </NuxtLink>
         <nav class="flex gap-2">
           <NuxtLink
+            :to="localePath('/')"
+            class="text-gray-800 hover:text-gray-600 transition-colors"
+          >
+            Articles
+          </NuxtLink>
+
+          <NuxtLink
             :to="localePath('/books')"
             class="text-gray-800 hover:text-gray-600 transition-colors"
           >

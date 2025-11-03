@@ -1,11 +1,11 @@
 import { defineContentConfig, defineCollection, z } from "@nuxt/content";
 
-export const ArticleSchema = z.object({
+const ArticleSchema = z.object({
   date: z.string().optional(),
   tags: z.array(z.string()).optional(),
 });
 
-export const BookSchema = z.object({
+const BookSchema = z.object({
   path: z.string(),
   title: z.string(),
   description: z.string(),
