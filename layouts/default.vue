@@ -11,13 +11,13 @@
             :to="localePath('/articles')"
             class="text-gray-800 hover:text-gray-600 transition-colors"
           >
-            articles
+            {{ $t("nav.articles") }}
           </NuxtLink>
           <NuxtLink
             :to="localePath('/books')"
             class="text-gray-800 hover:text-gray-600 transition-colors"
           >
-            books
+            {{ $t("nav.books") }}
           </NuxtLink>
         </nav>
       </div>

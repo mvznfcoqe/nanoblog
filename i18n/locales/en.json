@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "articles": "articles",
+    "books": "books"
+  },
+  "home": {
+    "latestArticles": "latest articles",
+    "latestBooks": "latest books",
+    "viewMore": "view more"
+  }
+}

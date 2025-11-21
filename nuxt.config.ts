@@ -32,8 +32,20 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   i18n: {
-    locales: ["ru", "en"],
+    locales: [
+      {
+        code: "ru",
+        language: "ru",
+        file: "ru.json",
+      },
+      {
+        code: "en",
+        language: "en",
+        file: "en.json",
+      },
+    ],
     defaultLocale: "en",
     strategy: "prefix",
+    langDir: "./locales",
   },
 });

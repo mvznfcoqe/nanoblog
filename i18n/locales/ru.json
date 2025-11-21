@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "articles": "статьи",
+    "books": "книги"
+  },
+  "home": {
+    "latestArticles": "последние статьи",
+    "latestBooks": "последние книги",
+    "viewMore": "показать все"
+  }
+}

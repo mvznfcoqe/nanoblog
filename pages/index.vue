@@ -2,10 +2,10 @@
   <div>
     <div>
       <div class="flex justify-between items-center">
-        <h4>latest articles</h4>
+        <h4>{{ $t("home.latestArticles") }}</h4>
 
         <NuxtLink :to="localePath('/articles')" class="text-gray">
-          view more
+          {{ $t("home.viewMore") }}
         </NuxtLink>
       </div>
 
@@ -20,10 +20,12 @@
 
     <div class="mt-5">
       <div class="flex justify-between items-center">
-        <h4 class="flex justify-between items-center">latest books</h4>
+        <h4 class="flex justify-between items-center">
+          {{ $t("home.latestBooks") }}
+        </h4>
 
         <NuxtLink :to="localePath('/books')" class="text-gray">
-          view more
+          {{ $t("home.viewMore") }}
         </NuxtLink>
       </div>
 
