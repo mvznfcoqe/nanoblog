@@ -2,10 +2,10 @@
   <div>
     <div>
       <div class="flex justify-between items-center">
-        <h4>Latest Articles</h4>
+        <h4>latest articles</h4>
 
         <NuxtLink :to="localePath('/articles')" class="text-gray">
-          see all
+          view more
         </NuxtLink>
       </div>
 
@@ -20,10 +20,10 @@
 
     <div class="mt-5">
       <div class="flex justify-between items-center">
-        <h4 class="flex justify-between items-center">Latest Books</h4>
+        <h4 class="flex justify-between items-center">latest books</h4>
 
         <NuxtLink :to="localePath('/books')" class="text-gray">
-          see all
+          view more
         </NuxtLink>
       </div>
 
