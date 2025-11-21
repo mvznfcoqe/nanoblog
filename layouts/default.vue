@@ -1,6 +1,6 @@
 <template>
-  <div class="font-sans mx-5">
-    <header class="flex justify-between gap-6 py-5 font-mono">
+  <div class="font-mono mx-5">
+    <header class="flex justify-between gap-6 py-5 mx-auto max-w-820px">
       <div class="flex items-center gap-6">
         <NuxtLink class="flex gap-2 items-center" :to="localePath('/')">
           <img src="/favicon/favicon.gif" alt="Angry logo" class="size-6" />
@@ -8,12 +8,11 @@
         </NuxtLink>
         <nav class="flex gap-2">
           <NuxtLink
-            :to="localePath('/')"
+            :to="localePath('/articles')"
             class="text-gray-800 hover:text-gray-600 transition-colors"
           >
             Articles
           </NuxtLink>
-
           <NuxtLink
             :to="localePath('/books')"
             class="text-gray-800 hover:text-gray-600 transition-colors"
@@ -34,7 +33,7 @@
       </div>
     </header>
 
-    <div class="max-w-prose mx-auto mt-5">
+    <div class="prose mx-auto max-w-820px">
       <slot />
     </div>
   </div>
@@ -42,6 +41,7 @@
 
 <script setup lang="ts">
 import "@unocss/reset/tailwind.css";
+import "@fontsource-variable/roboto-mono";
 
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();

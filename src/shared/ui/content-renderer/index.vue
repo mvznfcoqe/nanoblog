@@ -1,5 +1,5 @@
 <template>
-  <ContentRenderer :value="value" class="content prose" />
+  <ContentRenderer :value="value" class="content" />
 </template>
 
 <script setup lang="ts">

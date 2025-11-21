@@ -1,45 +1,91 @@
 <template>
-  <ContentRenderer v-if="homePageContent" :value="homePageContent" />
+  <div>
+    <div>
+      <div class="flex justify-between items-center">
+        <h4>Latest Articles</h4>
 
-  <hr v-if="articlesForCurrentLocale.length" />
+        <NuxtLink :to="localePath('/articles')" class="text-gray">
+          see all
+        </NuxtLink>
+      </div>
 
-  <div class="flex flex-col gap-3 mt-4">
-    <Article
-      v-for="article in articlesForCurrentLocale"
-      :key="article.id"
-      v-bind="article"
-    />
+      <div class="flex flex-col gap-3">
+        <Article
+          v-for="article in articlesForCurrentLocale"
+          :key="article.id"
+          v-bind="article"
+        />
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <div class="flex justify-between items-center">
+        <h4 class="flex justify-between items-center">Latest Books</h4>
+
+        <NuxtLink :to="localePath('/books')" class="text-gray">
+          see all
+        </NuxtLink>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <Book
+          v-for="book in booksForCurrentLocale"
+          :key="book.id"
+          v-bind="book"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { ArticlesCollectionItem } from "@nuxt/content";
+import type {
+  ArticlesCollectionItem,
+  BooksCollectionItem,
+} from "@nuxt/content";
 import { Article } from "@/pages/main";
-import { ContentRenderer } from "~/shared/ui/content-renderer";
+import { Book } from "@/pages/main";
 
-const route = useRoute("article");
+const localePath = useLocalePath();
 const { locale } = useI18n();
-
-const { data: homePageContent } = await useAsyncData(route.path, async () => {
-  const path = `/${locale.value}`;
-
-  return queryCollection("index").path(path).first();
-});
 
 const { data: articles } = await useAsyncData("articles", async () => {
   return queryCollection("articles").all();
 });
+
+const { data: books } = await useAsyncData<BooksCollectionItem[]>(
+  "books",
+  async () => {
+    return queryCollection("books").all();
+  }
+);
 
 const articlesForCurrentLocale = computed(() => {
   if (!articles.value) {
     return [];
   }
 
-  return articles.value.filter((article: ArticlesCollectionItem) => {
-    return (
-      article.path.startsWith(`/articles`) &&
-      article.path.endsWith(`/${locale.value}`)
-    );
-  });
+  return articles.value
+    .filter((article: ArticlesCollectionItem) => {
+      return (
+        article.path.startsWith(`/articles`) &&
+        article.path.endsWith(`/${locale.value}`)
+      );
+    })
+    .slice(0, 3);
+});
+
+const booksForCurrentLocale = computed(() => {
+  if (!books.value) {
+    return [];
+  }
+
+  return books.value
+    .filter((book: BooksCollectionItem) => {
+      return (
+        book.path.startsWith(`/books`) && book.path.includes(`/${locale.value}`)
+      );
+    })
+    .slice(0, 3);
 });
 </script>

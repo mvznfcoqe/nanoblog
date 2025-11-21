@@ -32,7 +32,7 @@ const articlePath = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col prose">
+  <div class="flex flex-col">
     <NuxtLink v-if="articlePath" :to="articlePath">
       {{ title }}
     </NuxtLink>

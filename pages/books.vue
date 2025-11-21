@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-8">
     <div
-      class="flex gap-2 prose"
+      class="flex gap-2 w-full"
       v-for="{
         id,
         title,
@@ -12,6 +12,7 @@
         cover,
       } in booksForCurrentLocale"
       :key="id"
+      :id="textToId(title)"
     >
       <a :href="url" class="w-18 shrink-0 flex items-center">
         <NuxtImg :src="cover" />
@@ -32,6 +33,7 @@
 
 <script setup lang="ts">
 import type { BooksCollectionItem } from "@nuxt/content";
+import { textToId } from "~/shared/lib/text-to-id";
 
 const { locale } = useI18n();
 
