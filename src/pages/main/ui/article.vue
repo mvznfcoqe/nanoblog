@@ -19,11 +19,17 @@ const articlePath = computed(() => {
     return;
   }
 
+  const articleName = props.path.split("/").at(-1);
+
+  if (!articleName) {
+    return;
+  }
+
   return localePath(
     {
       name: "article",
       params: {
-        article: props.path.split("/").filter(Boolean).slice(1, -1).join("/"),
+        article: articleName,
       },
     },
     locale.value

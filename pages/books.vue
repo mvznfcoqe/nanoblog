@@ -50,9 +50,7 @@ const booksForCurrentLocale = computed(() => {
   }
 
   return books.value.filter((book: BooksCollectionItem) => {
-    return (
-      book.path.startsWith(`/books`) && book.path.includes(`/${locale.value}`)
-    );
+    return book.path.startsWith(`/${locale.value}/books`);
   });
 });
 

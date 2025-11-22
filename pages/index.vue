@@ -69,10 +69,7 @@ const articlesForCurrentLocale = computed(() => {
 
   return articles.value
     .filter((article: ArticlesCollectionItem) => {
-      return (
-        article.path.startsWith(`/articles`) &&
-        article.path.endsWith(`/${locale.value}`)
-      );
+      return article.path.startsWith(`/${locale.value}/articles`);
     })
     .slice(0, 3);
 });
@@ -84,9 +81,7 @@ const booksForCurrentLocale = computed(() => {
 
   return books.value
     .filter((book: BooksCollectionItem) => {
-      return (
-        book.path.startsWith(`/books`) && book.path.includes(`/${locale.value}`)
-      );
+      return book.path.startsWith(`/${locale.value}/books`);
     })
     .slice(0, 3);
 });

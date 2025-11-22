@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@vueuse/nuxt",
     "@nuxt/image",
+    "@nuxtjs/sitemap",
   ],
   app: {
     head: {
@@ -47,5 +48,8 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     strategy: "prefix",
     langDir: "./locales",
+  },
+  site: {
+    url: "https://frkam.dev",
   },
 });

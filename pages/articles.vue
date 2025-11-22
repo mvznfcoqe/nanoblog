@@ -24,10 +24,7 @@ const articlesForCurrentLocale = computed(() => {
   }
 
   return articles.value.filter((article: ArticlesCollectionItem) => {
-    return (
-      article.path.startsWith(`/articles`) &&
-      article.path.endsWith(`/${locale.value}`)
-    );
+    return article.path.startsWith(`/${locale.value}/articles`);
   });
 });
 </script>

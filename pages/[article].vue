@@ -13,7 +13,7 @@ const { locale } = useI18n();
 const { data: article } = await useAsyncData(route.path, async () => {
   const { article } = route.params;
 
-  const path = `/articles/${article}/${locale.value}`;
+  const path = `/${locale.value}/articles/${article}`;
 
   return queryCollection("articles").path(path).first();
 });
