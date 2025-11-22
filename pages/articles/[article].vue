@@ -1,5 +1,5 @@
 <template>
-  <ContentRenderer :value="article" />
+  <ContentRenderer v-if="article" :value="article" />
 </template>
 
 <script setup lang="ts">
