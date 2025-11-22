@@ -1,3 +1,5 @@
+import { definePerson } from "nuxt-schema-org/schema";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -21,6 +23,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    "nuxt-schema-org",
   ],
   app: {
     head: {
@@ -53,5 +56,16 @@ export default defineNuxtConfig({
   site: {
     url: "https://frkam.dev",
     name: "frkam / nanoblog",
+  },
+  schemaOrg: {
+    identity: definePerson({
+      name: "frkam",
+      url: "https://frkam.dev",
+      sameAs: [
+        "https://github.com/mvznfcoqe",
+        "https://t.me/mvznfcoqe",
+        "frkam@icloud.com",
+      ],
+    }),
   },
 });

@@ -24,6 +24,7 @@
     "better-sqlite3": "^12.2.0",
     "date-fns": "^4.1.0",
     "nuxt": "^3.17.5",
+    "nuxt-schema-org": "^5.0.9",
     "nuxt-typed-router": "3.7.3",
     "prettier": "^3.5.3",
     "unstorage": "^1.16.1",

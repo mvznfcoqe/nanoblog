@@ -1,5 +1,6 @@
 import { defineContentConfig, defineCollection, z } from "@nuxt/content";
 import { asSitemapCollection } from "@nuxtjs/sitemap/content";
+import { asSchemaOrgCollection } from "nuxt-schema-org/content";
 
 const ArticleSchema = z.object({
   date: z.string().optional(),
@@ -21,18 +22,22 @@ const BookSchema = z.object({
 export default defineContentConfig({
   collections: {
     articles: defineCollection(
-      asSitemapCollection({
-        type: "page",
-        source: "**/articles/**/*.md",
-        schema: ArticleSchema,
-      })
+      asSchemaOrgCollection(
+        asSitemapCollection({
+          type: "page",
+          source: "**/articles/**/*.md",
+          schema: ArticleSchema,
+        })
+      )
     ),
     books: defineCollection(
-      asSitemapCollection({
-        type: "data",
-        source: "**/books/**/*.md",
-        schema: BookSchema,
-      })
+      asSchemaOrgCollection(
+        asSitemapCollection({
+          type: "data",
+          source: "**/books/**/*.md",
+          schema: BookSchema,
+        })
+      )
     ),
   },
 });
