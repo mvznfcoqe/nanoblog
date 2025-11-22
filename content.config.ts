@@ -4,6 +4,7 @@ import { asSitemapCollection } from "@nuxtjs/sitemap/content";
 const ArticleSchema = z.object({
   date: z.string().optional(),
   tags: z.array(z.string()).optional(),
+  description: z.string(),
 });
 
 const BookSchema = z.object({

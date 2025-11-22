@@ -17,4 +17,27 @@ const { data: article } = await useAsyncData(route.path, async () => {
 
   return queryCollection("articles").path(path).first();
 });
+
+const title = computed(() => {
+  if (!article.value) {
+    return;
+  }
+
+  return article.value.title;
+});
+
+const description = computed(() => {
+  if (!article.value) {
+    return;
+  }
+
+  return article.value.description;
+});
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+});
 </script>

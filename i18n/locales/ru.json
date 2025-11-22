@@ -7,5 +7,13 @@
     "latestArticles": "последние статьи",
     "latestBooks": "последние книги",
     "viewMore": "показать все"
+  },
+  "pages": {
+    "articles": {
+      "title": "статьи"
+    },
+    "books": {
+      "title": "книги"
+    }
   }
 }

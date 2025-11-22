@@ -48,6 +48,10 @@ import type {
 import { Article } from "@/pages/main";
 import { Book } from "@/pages/main";
 
+useSeoMeta({
+  title: `%siteName`,
+});
+
 const localePath = useLocalePath();
 const { locale } = useI18n();
 

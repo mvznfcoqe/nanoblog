@@ -1,6 +1,7 @@
 ---
 date: 04-11-2025
 tags: ["self-hosted"]
+description: "Обзор self-hosted решений для стриминга игр и рабочего стола по сети."
 ---
 
 # Self-hosted решения для стриминга

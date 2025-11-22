@@ -35,7 +35,11 @@
 import type { BooksCollectionItem } from "@nuxt/content";
 import { textToId } from "~/shared/lib/text-to-id";
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
+
+useSeoMeta({
+  title: `${t("pages.books.title")} %separator %siteName`,
+});
 
 const { data: books } = await useAsyncData<BooksCollectionItem[]>(
   "books",

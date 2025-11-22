@@ -12,7 +12,11 @@
 import type { ArticlesCollectionItem } from "@nuxt/content";
 import { Article } from "@/pages/main";
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
+
+useSeoMeta({
+  title: `${t("pages.articles.title")} %separator %siteName`,
+});
 
 const { data: articles } = await useAsyncData("articles", async () => {
   return queryCollection("articles").all();

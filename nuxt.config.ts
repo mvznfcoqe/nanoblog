@@ -52,5 +52,6 @@ export default defineNuxtConfig({
   },
   site: {
     url: "https://frkam.dev",
+    name: "frkam / nanoblog",
   },
 });
