@@ -1,7 +1,5 @@
 <template>
-  <ContentRenderer v-if="article" :value="article" />
-
-  <template v-else>Not found</template>
+  <ContentRenderer :value="article" />
 </template>
 
 <script setup lang="ts">
