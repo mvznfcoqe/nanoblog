@@ -2,6 +2,7 @@
 date: 04-11-2025
 tags: ["self-hosted"]
 description: "Overview of self-hosted solutions for streaming games and desktops over the network."
+preview: "/media/articles/self-hosted-solutions-for-streaming/Steam-Link.gif"
 ---
 
 # Self-hosted solutions for streaming

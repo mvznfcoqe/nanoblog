@@ -5,6 +5,7 @@ const ArticleSchema = z.object({
   date: z.string().optional(),
   tags: z.array(z.string()).optional(),
   description: z.string(),
+  preview: z.string(),
 });
 
 const BookSchema = z.object({

@@ -34,10 +34,21 @@ const description = computed(() => {
   return article.value.description;
 });
 
+const previewUrl = computed(() => {
+  if (!article.value) {
+    return;
+  }
+
+  return article.value.preview;
+});
+
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
+  ogImage: {
+    url: previewUrl.value,
+  },
 });
 </script>
