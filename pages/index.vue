@@ -48,12 +48,14 @@ import type {
 import { Article } from "@/pages/main";
 import { Book } from "@/pages/main";
 
+const { locale, t } = useI18n();
+
 useSeoMeta({
   title: `%siteName`,
+  description: t("pages.main.description"),
 });
 
 const localePath = useLocalePath();
-const { locale } = useI18n();
 
 const { data: articles } = await useAsyncData("articles", async () => {
   return queryCollection("articles").all();

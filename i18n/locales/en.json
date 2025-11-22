@@ -8,7 +8,10 @@
     "latestBooks": "latest books",
     "viewMore": "view more"
   },
-   "pages": {
+  "pages": {
+    "main": {
+      "description": "My personal blog about... something"
+    },
     "articles": {
       "title": "articles"
     },

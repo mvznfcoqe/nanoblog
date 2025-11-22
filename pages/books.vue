@@ -39,6 +39,7 @@ const { locale, t } = useI18n();
 
 useSeoMeta({
   title: `${t("pages.books.title")} %separator %siteName`,
+  description: t("pages.books.description"),
 });
 
 const { data: books } = await useAsyncData<BooksCollectionItem[]>(

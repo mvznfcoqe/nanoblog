@@ -9,11 +9,16 @@
     "viewMore": "показать все"
   },
   "pages": {
+    "main": {
+      "description": "Мой личный блог о... чем-то"
+    },
     "articles": {
-      "title": "статьи"
+      "title": "статьи",
+      "description": "список статей"
     },
     "books": {
-      "title": "книги"
+      "title": "книги",
+      "description": "список книг"
     }
   }
 }

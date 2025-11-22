@@ -16,6 +16,7 @@ const { locale, t } = useI18n();
 
 useSeoMeta({
   title: `${t("pages.articles.title")} %separator %siteName`,
+  description: t("pages.articles.description"),
 });
 
 const { data: articles } = await useAsyncData("articles", async () => {

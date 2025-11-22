@@ -47,13 +47,20 @@ import "@unocss/reset/tailwind.css";
 import "@fontsource-variable/roboto-mono";
 import Footer from "~/shared/ui/layout/footer.vue";
 
+const siteName = "frkam / nanoblog";
+
 useHead({
   templateParams: {
-    siteName: "frkam / nanoblog",
+    siteName,
   },
 });
 
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
 const { locale } = useI18n();
+
+useSeoMeta({
+  ogLocale: locale,
+  ogSiteName: siteName,
+});
 </script>
