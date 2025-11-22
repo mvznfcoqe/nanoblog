@@ -53,6 +53,11 @@ export default defineNuxtConfig({
     strategy: "prefix",
     langDir: "./locales",
   },
+  router: {
+    options: {
+      strict: true,
+    },
+  },
   site: {
     url: "https://frkam.dev",
     name: "frkam / nanoblog",
