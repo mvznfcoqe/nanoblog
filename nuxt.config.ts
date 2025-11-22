@@ -56,6 +56,7 @@ export default defineNuxtConfig({
   site: {
     url: "https://frkam.dev",
     name: "frkam / nanoblog",
+    trailingSlash: true,
   },
   schemaOrg: {
     identity: definePerson({
