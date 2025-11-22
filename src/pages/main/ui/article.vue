@@ -27,7 +27,7 @@ const articlePath = computed(() => {
 
   return localePath(
     {
-      name: "article",
+      name: "articles-article",
       params: {
         article: articleName,
       },

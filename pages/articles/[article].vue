@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { ContentRenderer } from "~/shared/ui/content-renderer";
 
-const route = useRoute("article");
+const route = useRoute("articles-article");
 const { locale } = useI18n();
 
 const { data: article } = await useAsyncData(route.path, async () => {
