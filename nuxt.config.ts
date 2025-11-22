@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/image",
     "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
   app: {
     head: {
