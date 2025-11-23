@@ -1,6 +1,6 @@
 <template>
   <footer class="py-5 mt-10 border-t border-t-gray">
-    <div class="flex gap-2">
+    <div class="flex gap-2 flex-wrap">
       <a class="underline" href="https://github.com/mvznfcoqe" target="_blank">
         github
       </a>
