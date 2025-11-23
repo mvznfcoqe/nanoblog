@@ -12,4 +12,9 @@ defineProps<{ value: IndexCollectionItem }>();
 .content img {
   @apply w-full;
 }
+
+.content li,
+.content ul {
+  @apply list-inside;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-8">
     <div
-      class="flex gap-2 w-full"
+      class="flex flex-col sm:flex-row gap-2 w-full"
       v-for="{
         id,
         title,
@@ -14,8 +14,8 @@
       :key="id"
       :id="textToId(title)"
     >
-      <a :href="url" class="w-18 shrink-0 flex items-center">
-        <NuxtImg :src="cover" />
+      <a :href="url" class="max-w-50% sm:w-18 shrink-0 flex items-center">
+        <NuxtImg class="w-full" :src="cover" />
       </a>
 
       <div class="flex flex-col">
