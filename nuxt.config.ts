@@ -79,4 +79,8 @@ export default defineNuxtConfig({
       ],
     }),
   },
+  routeRules: {
+    "/ru": { redirect: { to: "/", statusCode: 301 } },
+    "/ru/**": { redirect: { to: "/**", statusCode: 301 } },
+  },
 });
