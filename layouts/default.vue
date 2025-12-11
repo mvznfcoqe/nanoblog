@@ -3,7 +3,7 @@
     <header class="flex justify-between gap-6 py-5 container">
       <div class="flex items-center gap-6">
         <NuxtLink class="flex gap-2 items-center" :to="localePath('/')">
-          <img :src="Logo" alt="Angry logo" class="size-6" />
+          <img :src="Logo" alt="Logo" class="size-6" />
           <span class="hidden sm:inline">frkam / </span>nanoblog
         </NuxtLink>
         <nav class="flex gap-4">
@@ -45,15 +45,15 @@
 import "@/shared/assets/styles.css";
 import "@unocss/reset/tailwind.css";
 import "@fontsource-variable/roboto-mono";
+import Logo from "~/shared/assets/logo.jpg";
 import Footer from "~/shared/ui/layout/footer.vue";
-import Logo from "~/shared/assets/logo.gif";
 
 const siteName = "frkam / nanoblog";
 
 useHead({
-  templateParams: {
-    siteName,
-  },
+	templateParams: {
+		siteName,
+	},
 });
 
 const switchLocalePath = useSwitchLocalePath();
@@ -61,7 +61,7 @@ const localePath = useLocalePath();
 const { locale } = useI18n();
 
 useSeoMeta({
-  ogLocale: locale,
-  ogSiteName: siteName,
+	ogLocale: locale,
+	ogSiteName: siteName,
 });
 </script>
