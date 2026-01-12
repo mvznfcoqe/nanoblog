@@ -5,6 +5,11 @@ export default defineNuxtConfig({
 	compatibilityDate: "2024-11-01",
 	devtools: { enabled: true },
 	srcDir: "src",
+	runtimeConfig: {
+		public: {
+			metricsApiUrl: process.env.METRICS_API_URL,
+		},
+	},
 	dir: {
 		plugins: "shared/plugins",
 		public: "shared/public",

@@ -1,24 +1,28 @@
 {
-  "nav": {
-    "articles": "статьи",
-    "books": "книги"
-  },
-  "home": {
-    "latestArticles": "последние статьи",
-    "latestBooks": "последние книги",
-    "viewMore": "показать все"
-  },
-  "pages": {
-    "main": {
-      "description": "Мой личный блог о... чем-то"
-    },
-    "articles": {
-      "title": "статьи",
-      "description": "список статей"
-    },
-    "books": {
-      "title": "книги",
-      "description": "список книг"
-    }
-  }
+	"nav": {
+		"articles": "статьи",
+		"books": "книги"
+	},
+	"home": {
+		"latestArticles": "последние статьи",
+		"latestBooks": "последние книги",
+		"viewMore": "показать все",
+		"metrics": "мои ноды и то, что на них крутится"
+	},
+	"pages": {
+		"main": {
+			"description": "Мой личный блог о... чем-то"
+		},
+		"articles": {
+			"title": "статьи",
+			"description": "список статей"
+		},
+		"books": {
+			"title": "книги",
+			"description": "список книг"
+		}
+	},
+	"shared": {
+		"loading": "загрузка..."
+	}
 }

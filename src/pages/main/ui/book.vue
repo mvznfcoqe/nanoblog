@@ -4,9 +4,9 @@ import { dateFormat } from "~/shared/consts/formats";
 import { textToId } from "~/shared/lib/text-to-id";
 
 type Props = {
-  title: string;
-  date?: string;
-  description?: string;
+	title: string;
+	date?: string;
+	description?: string;
 };
 
 const props = defineProps<Props>();
@@ -15,10 +15,10 @@ const { locale } = useI18n();
 const localePath = useLocalePath();
 
 const bookPath = computed(() => {
-  return localePath(
-    { name: "books", hash: `#${textToId(props.title)}` },
-    locale.value
-  );
+	return localePath(
+		{ name: "books", hash: `#${textToId(props.title)}` },
+		locale.value,
+	);
 });
 </script>
 
@@ -34,7 +34,7 @@ const bookPath = computed(() => {
 
     <div class="flex gap-1 text-xs opacity-50" v-if="date">
       <div v-if="date">
-        {{ parse(date, dateFormat, new Date()).toLocaleDateString(locale) }},
+        {{ parse(date, dateFormat, new Date()).toLocaleDateString(locale) }}
       </div>
     </div>
   </div>

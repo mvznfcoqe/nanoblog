@@ -46,14 +46,14 @@ import "@/shared/assets/styles.css";
 import "@unocss/reset/tailwind.css";
 import "@fontsource-variable/roboto-mono";
 import Logo from "~/shared/assets/logo.jpg";
-import Footer from "~/shared/ui/layout/footer.vue";
+import { Footer } from "~/shared/ui/layout";
 
 const siteName = "frkam / nanoblog";
 
 useHead({
-	templateParams: {
-		siteName,
-	},
+  templateParams: {
+    siteName,
+  },
 });
 
 const switchLocalePath = useSwitchLocalePath();
@@ -61,7 +61,7 @@ const localePath = useLocalePath();
 const { locale } = useI18n();
 
 useSeoMeta({
-	ogLocale: locale,
-	ogSiteName: siteName,
+  ogLocale: locale,
+  ogSiteName: siteName,
 });
 </script>

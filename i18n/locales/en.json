@@ -1,22 +1,26 @@
 {
-  "nav": {
-    "articles": "articles",
-    "books": "books"
-  },
-  "home": {
-    "latestArticles": "latest articles",
-    "latestBooks": "latest books",
-    "viewMore": "view more"
-  },
-  "pages": {
-    "main": {
-      "description": "My personal blog about... something"
-    },
-    "articles": {
-      "title": "articles"
-    },
-    "books": {
-      "title": "books"
-    }
-  }
+	"nav": {
+		"articles": "articles",
+		"books": "books"
+	},
+	"home": {
+		"latestArticles": "latest articles",
+		"latestBooks": "latest books",
+		"viewMore": "view more",
+		"metrics": "my nodes and services running on them"
+	},
+	"pages": {
+		"main": {
+			"description": "My personal blog about... something"
+		},
+		"articles": {
+			"title": "articles"
+		},
+		"books": {
+			"title": "books"
+		}
+	},
+	"shared": {
+		"loading": "loading..."
+	}
 }

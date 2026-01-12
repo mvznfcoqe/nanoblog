@@ -37,6 +37,16 @@
         />
       </div>
     </div>
+
+    <div class="mt-5">
+      <div class="flex justify-between items-center">
+        <h4>{{ $t("home.metrics") }}</h4>
+      </div>
+
+      <div>
+        <Metrics />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,8 +55,8 @@ import type {
   ArticlesCollectionItem,
   BooksCollectionItem,
 } from "@nuxt/content";
-import { Article } from "@/pages/main";
-import { Book } from "@/pages/main";
+import { Article, Book } from "@/pages/main";
+import Metrics from "~/pages/main/ui/metrics.vue";
 
 const { locale, t } = useI18n();
 
